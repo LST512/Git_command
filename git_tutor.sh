@@ -1,6 +1,7 @@
-# git配置
+# git tutor
 # 2018-12-6
 # lst
+# 参考来自https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
 # 安装
 sudo apt-get install git
 # 通过Git生成SSH Key；id_rsa.pub”文件内容就是公钥
@@ -70,8 +71,9 @@ git rm file #从版本库中删除该文件,不能用git checkout -- file 恢复
 #远程仓库
 git remote add origin git@github.com:LST512/Git_command.git
 git push -u origin master
-
-
+'''
+程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。
+'''
 
 
 
