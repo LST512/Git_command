@@ -1,7 +1,7 @@
 # git tutor
 # 2018-12-6
 # lst
-# 参考来自https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
+# 参考来自 https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
 # 安装
 sudo apt-get install git
 # 通过Git生成SSH Key；id_rsa.pub”文件内容就是公钥
@@ -72,9 +72,14 @@ git rm file #从版本库中删除该文件,不能用git checkout -- file 恢复
 git remote add origin git@github.com:LST512/Git_command.git
 git push -u origin master
 '''
+要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git;
+关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
+此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
 程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。
+本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。
+由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
 '''
-
+git push origin master
 
 
 
