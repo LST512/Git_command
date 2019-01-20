@@ -15,6 +15,7 @@ ssh -T git@github.com
 git config --global user.name "LST512"
 git config --global user.email “838395676@qq.com”
 git config --list 查看配置结果
+#----------------------------------------
 #文件添加到仓库，不会有提示,可以同时add多个文件
 git add git_learning.txt
 #文件提交到仓库,可以提交多个文件
@@ -80,15 +81,43 @@ git push -u origin master
 由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
 '''
 git push origin master
+#-----------------------
+#从远程库克隆
+git clone git@github.com:LST512/Git_command.git
+#分支管理
+'''
+具体图形解释参考此处
+https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375840038939c291467cc7c747b1810aab2fb8863508000
+'''
+#创建分支dev，并切换到分支-b
+git branch dev #创建分支
+git checkout dev #切换到分支
+git checkout -b dev #创建并切换
+#列出所有分支，当前分支前面会标一个*号。
+git branch
+#把dev分支的工作成果合并到master分支上：
+git merge dev
+'''
+切换回master分支后，刚才添加的内容不见了！因为那个提交是在dev分支上，而master分支此刻的提交点并没有变：
+Fast-forward信息，Git告诉我们，这次合并是“快进模式”，也就是直接把master指向dev的当前提交，所以合并速度非常快。
+'''
+#删除dev分支了
+git branch -d dev
+'''
+Git鼓励大量使用分支：
 
+查看分支：git branch
 
+创建分支：git branch <name>
 
+切换分支：git checkout <name>
 
+创建+切换分支：git checkout -b <name>
 
+合并某分支到当前分支：git merge <name>
 
-
-
-
+删除分支：git branch -d <name>
+'''
 
 
 
