@@ -118,6 +118,14 @@ Git鼓励大量使用分支：
 
 删除分支：git branch -d <name>
 '''
+#提示：更新被拒绝，因为远程仓库包含您本地尚不存在的提交
+git push -u origin +master　#使用+master 强制更新
+#or
+git pull origin master
+git pull origin master master
+'''
+git pull命令的作用是，取回远程主机某个分支的更新，再与本地的指定分支合并。
+'''
 
 
 
