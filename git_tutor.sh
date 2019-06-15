@@ -15,6 +15,10 @@ ssh -T git@github.com
 git config --global user.name "LST512"
 git config --global user.email “838395676@qq.com”
 git config --list 查看配置结果
+#Switching remote URLs from SSH to HTTPS
+git remote -v
+git remote set-url origin git@github.com:LST512/Git_command.git
+
 #----------------------------------------
 #文件添加到仓库，不会有提示,可以同时add多个文件
 git add git_learning.txt
